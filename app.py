@@ -80,7 +80,7 @@ class Catalogo:
 
     #----------------------------------------------------------------
     def modificar_vehiculo(self, codigo, nueva_marca, nuevo_modelo, nuevo_precio, nueva_imagen, nuevo_año, nuevo_kilometros, nueva_transmision):
-        sql = "UPDATE vehiculos SET marca = %s, modelo = %s, precio = %f, imagen_url = %s, año = %i, kilometros= %i, transmision=%s WHERE codigo = %s"
+        sql = "UPDATE vehiculos SET marca = %s, modelo = %s, precio = %s, imagen_url = %s, año = %s, kilometros= %s, transmision=%s WHERE codigo = %s"
         valores = (nueva_marca, nuevo_modelo, nuevo_precio, nueva_imagen, nuevo_año, nuevo_kilometros, nueva_transmision, codigo)
         self.cursor.execute(sql, valores)
         self.conn.commit()
