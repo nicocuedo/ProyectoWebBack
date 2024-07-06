@@ -7,10 +7,29 @@
 
 body {
     font-family: Mon;
-    background-color: #1d1a39;
-    color:white;
+    min-height: 100vh;
+    background:linear-gradient(rgba(5, 7, 12,0.75),rgba(5,7,12, 0.75)),  url(/static/imagenes/FONDO.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    
 }
 
+.navbar-index{
+    margin: 0;
+    padding: 0;
+    
+    top: 0;
+    width: 100vw;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: fixed !important; 
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
 .contenedor-centrado {
     display:flex;
     width: 100%;
@@ -24,28 +43,14 @@ body {
     margin-bottom: 5px;
     margin-top: 120px;
 }
-
-.navbar-index{
-    margin: 0;
-    padding: 0;
-    
-    top: 0;
-    width: 100vw;
-    height: 100px;
-    background-color: #390E8C;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; 
-    
-    overflow: hidden;
-    margin-bottom: 20px;
-    position: fixed !important; 
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-}
-
 .logo-nav{height: 80%;
     overflow: hidden;
     margin-left: 1em;
+}
+.txtprincipal{
+    color: grey;
+    text-align: center;
+    text-shadow:2px  3px 15px black;
 }
 
 p {
@@ -58,14 +63,14 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #ffd200;
+    color: grey;
 }
 
 form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #390e8c;
+    background-color: white;
     border: 1px solid lightslategray;
     border-radius: 5px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
@@ -75,7 +80,7 @@ table {
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #390e8c;
+    background-color: white;
     border: 1px solid lightslategray;
     border-radius: 5px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
@@ -126,8 +131,8 @@ button:hover {
 a {
     padding: 8px;
     margin:4px;
-    background-color: #fdab13;
-    color: #1d1a39;
+    background-color: black;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -137,6 +142,6 @@ a {
 }
 
 a:hover {
-    background-color: #1d1a39;
-    color:#fdab13
+    background-color: white;
+    color: gray
 }
