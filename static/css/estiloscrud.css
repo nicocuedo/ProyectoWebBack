@@ -8,7 +8,7 @@
 body {
     font-family: Mon;
     min-height: 100vh;
-    background:linear-gradient(rgba(5, 7, 12,0.75),rgba(5,7,12, 0.75)),  url(/static/imagenes/FONDO.jpeg) no-repeat center center fixed;
+    background:linear-gradient(rgba(5, 7, 12,0.75),rgba(5,7,12, 0.75)),  url(/static/imagenes/FONDO.png) no-repeat center center fixed;
     background-size: cover;
     
 }
