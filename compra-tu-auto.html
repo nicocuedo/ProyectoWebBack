@@ -207,9 +207,6 @@
 
           //Esta función maneja los datos convertidos del JSON.
           .then(function (data) {
-              //let tablaVehiculos = document.getElementById('tablaVehiculos'); //Selecciona el elemento del DOM donde se mostrarán los productos.
-              // Iteramos sobre cada producto y agregamos filas a la tabla
-		console.debug(data)
               for (let vehiculo of data) {
                   // Crear un string con el contenido HTML usando template strings
                   htmlVehiculos += `
