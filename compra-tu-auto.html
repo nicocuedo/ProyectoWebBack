@@ -185,11 +185,8 @@
     <script src="js/index.js"></script>
    <script>
       // const URL = "http://127.0.0.1:5000/"
-	 const URL = "https://GimenezCristian.pythonanywhere.com/"
-
-      // Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-      //const URL = "https://USUARIO.pythonanywhere.com/"
-      
+	 const URL = "https://GimenezCristian.pythonanywhere.com/
+     
       
       // Obtener el contenedor donde se insertará el contenido
       //const contenedorVehiculos = document.getElementById('container-stock');
@@ -213,7 +210,6 @@
           .then(function (data) {
               //let tablaVehiculos = document.getElementById('tablaVehiculos'); //Selecciona el elemento del DOM donde se mostrarán los productos.
               // Iteramos sobre cada producto y agregamos filas a la tabla
-              console.log(data)
               for (let vehiculo of data) {
                   // Crear un string con el contenido HTML usando template strings
                   htmlVehiculos += `
@@ -238,9 +234,6 @@
               // Código para manejar errores
               alert('Error al obtener los vehiculos.');
       });
-
-      // Insertar el contenido HTML generado en el contenedor
-      //contenedorVehiculos.innerHTML = htmlVehiculos;
 
   </script>
   </body>
