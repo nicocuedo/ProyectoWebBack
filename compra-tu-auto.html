@@ -185,11 +185,8 @@
     <script src="js/index.js"></script>
    <script>
       // const URL = "http://127.0.0.1:5000/"
-	 const URL = "https://GimenezCristian.pythonanywhere.com/";
-     
-	// Obtener la URL base estática
-    	var urlBase = "https://www.pythonanywhere.com/user/GimenezCristian/files/home/GimenezCristian/mysite/static/imagenes/";
-	   
+	 const URL = "https://GimenezCristian.pythonanywhere.com/"
+        
       // Obtener el contenedor donde se insertará el contenido
       //const contenedorVehiculos = document.getElementById('container-stock');
       const contenedorVehiculos = document.querySelector('.container-stock');
@@ -218,7 +215,7 @@
                   htmlVehiculos += `
                   <div class="stock">
                       <figure>
-                      <img src=urlBase + ${vehiculo.imagen_url} alt=""/>
+                      <img src="https://www.pythonanywhere.com/user/GimenezCristian/files/home/GimenezCristian/mysite/static/imagenes/" + ${vehiculo.imagen_url} alt=""/>
                       </figure>
                       <div class="contenido">
                       <h3>${vehiculo.marca} ${vehiculo.modelo}</h3>
