@@ -138,7 +138,7 @@ RUTA_DESTINO = '/home/GimenezCristian/mysite/static/imagenes'
 #--------------------------------------------------------------------
 #La ruta Flask /productos con el método HTTP GET está diseñada para proporcionar los detalles de todos los productos almacenados en la base de datos.
 #El método devuelve una lista con todos los productos en formato JSON.
-@app.route("/vehiculos", methods=["GET"])
+@app.route("/admin", methods=["GET"])
 def listar_vehiculos():
     vehiculos = catalogo.listar_vehiculos()
     return jsonify(vehiculos)
@@ -149,7 +149,7 @@ def listar_vehiculos():
 #--------------------------------------------------------------------
 #La ruta Flask /vehiculos/<int:codigo> con el método HTTP GET está diseñada para proporcionar los detalles de un vehiculo específico basado en su código.
 #El método busca en la base de datos el vehiculo con el código especificado y devuelve un JSON con los detalles del vehiculo si lo encuentra, o None si no lo encuentra.
-@app.route("/vehiculos/<int:codigo>", methods=["GET"])
+@app.route("/admin/<int:codigo>", methods=["GET"])
 def mostrar_vehiculo(codigo):
     vehiculo = catalogo.consultar_vehiculo(codigo)
     if vehiculo:
@@ -161,7 +161,7 @@ def mostrar_vehiculo(codigo):
 #--------------------------------------------------------------------
 # Agregar un vehiculo
 #--------------------------------------------------------------------
-@app.route("/vehiculos", methods=["POST"])
+@app.route("/admin", methods=["POST"])
 #La ruta Flask `/vehiculos` con el método HTTP POST está diseñada para permitir la adición de un nuevo vehiculo a la base de datos.
 #La función agregar_vehiculo se asocia con esta URL y es llamada cuando se hace una solicitud POST a /vehiculos.
 def agregar_vehiculo():
@@ -194,7 +194,7 @@ def agregar_vehiculo():
 #--------------------------------------------------------------------
 # Modificar un vehiculo según su código
 #--------------------------------------------------------------------
-@app.route("/vehiculos/<int:codigo>", methods=["PUT"])
+@app.route("/admin/<int:codigo>", methods=["PUT"])
 #La ruta Flask /vehiculos/<int:codigo> con el método HTTP PUT está diseñada para actualizar la información de un vehiculo existente en la base de datos, identificado por su código.
 #La función modificar_vehiculo se asocia con esta URL y es invocada cuando se realiza una solicitud PUT a /vehiculos/ seguido de un número (el código del vehiculo).
 def modificar_vehiculo(codigo):
@@ -250,7 +250,7 @@ def modificar_vehiculo(codigo):
 #--------------------------------------------------------------------
 # Eliminar un vehiculo según su código
 #--------------------------------------------------------------------
-@app.route("/vehiculos/<int:codigo>", methods=["DELETE"])
+@app.route("/admin/<int:codigo>", methods=["DELETE"])
 #La ruta Flask /vehiculos/<int:codigo> con el método HTTP DELETE está diseñada para eliminar un vehiculo específico de la base de datos, utilizando su código como identificador.
 #La función eliminar_vehiculo se asocia con esta URL y es llamada cuando se realiza una solicitud DELETE a /vehiculos/ seguido de un número (el código del vehiculo).
 def eliminar_vehiculo(codigo):

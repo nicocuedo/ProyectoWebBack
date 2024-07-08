@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modificar Stock</title>
-    <link rel="stylesheet" href="./static/css/estilos.css">
+    <link rel="stylesheet" href="./static/css/estiloscrud.css">
+    
 </head>
 
 <body>
     <header>
-        <nav class="navbar-index ">
-            <img class="logo-nav" src="./static/imagenes/maipu.png" alt="logo agencia de aprendizaje">
+        <nav class="navbar-index">
+            <a href="index.html">
+                <img class="logo-nav" src="./static/imagenes/maipu.png" alt="logo agencia de aprendizaje">
+            </a>
         </nav>
     </header>
 
@@ -27,7 +30,7 @@
         <form id="form-obtener-producto">
             <label for="codigo">Código:</label>
             <input type="text" id="codigo" required><br>
-            <button type="submit">Modificar vehiculo</button> <a href="index.html">Menu principal</a>
+            <button type="submit">Modificar vehiculo</button> <a href="admin.html">Menu principal</a>
         </form>
 
         <!-- Segundo formulario: se muestra solo si mostrarDatosProducto es verdadero. Llama a la función guardarCambios -->

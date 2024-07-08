@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- script fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/04844f94bb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>MAIPU Cars</title>
+  </head>
+  <body>
+    <!---------------- Header ---------------->
+    <header class="header">
+      <nav class="nav-bar">
+        <div>
+          <a href="./index.html" class="faster-one-regular">MAIPU</a>
+          <a href="./index.html" class="nunito-regular-small">CARS</a>
+        </div>
+        <label for="menu-hamb">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="texto-nav list-icon bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </label>
+
+        <input type="checkbox" name="menu-hamb" class="menu-hamb" id="menu-hamb" />
+
+        <ul class="nav-links">
+          <li>
+            <a class="texto-nav" href="compra-tu-auto.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-car-front"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17s2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276"
+                />
+                <path
+                  d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.8.8 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155s4.037-.084 5.592-.155A1.48 1.48 0 0 0 15 9.611v-.413q0-.148-.03-.294l-.335-1.68a.8.8 0 0 0-.43-.563 1.8 1.8 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3z"
+                />
+              </svg>
+              Comprá tu auto
+            </a>
+          </li>
+          <li>
+            <a class="texto-nav" href="./vende-tu-auto.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-currency-dollar"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"
+                />
+              </svg>
+              Vende tu auto
+            </a>
+          </li>
+          <li>
+            <a class="texto-nav" href="./como-funciona.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-question-circle"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+                />
+                <path
+                  d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"
+                />
+              </svg>
+              ¿Cómo funciona?
+            </a>
+          </li>
+          <li class="textos-banner">
+            <a class="texto-nav" href="#" id="mensaje-bienvenida">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-person-circle"
+                viewBox="0 0 16 16"
+              >
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                <path
+                  fill-rule="evenodd"
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+                />
+              </svg>
+              Iniciar Sesión
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+      <section id="banner-venta">
+        <div class="card-banner container">
+          <h1 class="text-banner-venta">¿Queres vender tu usado?</h1>
+          <a class="btn btn-venta" href="#form-venta">Cotizar</a>
+        </div>
+      </section>
+      <!-- cartas de presentacion -->
+      <section class="body-card">
+        <div class="container-card">
+          <div class="card">
+            <figure>
+              <img src="img/cards.jpg" alt="" />
+            </figure>
+            <div class="contenido">
+              <h3>Cotizacion</h3>
+              <p>
+                Vendé tu auto desde tu celular en la comodidad de tu casa. No es
+                necesario que compres otro auto.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <figure>
+              <img src="img/cards.jpg" alt="" />
+            </figure>
+            <div class="contenido">
+              <h3>Peritaje</h3>
+              <p>
+                Concretamos una cita para verificar tu auto en 15 minutos y sin
+                costo.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <figure>
+              <img src="img/cards.jpg" alt="" />
+            </figure>
+            <div class="contenido">
+              <h3>Pago</h3>
+              <p>
+                Nos ocupamos de todos los trámites y te transferimos el dinero.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- formulario sobre los datos del auto que quieren cotizar, para luego vender -->
+      <section class="form-venta" id="form-venta">
+        <div class="content">
+          <h1 class="logotipo-form-ventas">Vende tu Usado</h1>
+        </div>
+        <div class="form-wrapper">
+          <div class="contact-form">
+            <h3>Ingresa tus datos personales y los de tu vehículo</h3>
+            <form>
+              <!-- grupo:nombre -->
+              <p>
+                <label for="Nombre" >Nombre(s) y Apellido(s)</label>
+                <i id="Icono-Nombre"></i>
+                <input type="text" name="Nombre" id="Nombre" />
+                
+              </p>
+              <!-- grupo:Marca -->
+              <p>
+                <label for="Marca">Marca</label>
+                <i id="Icono-Marca"></i>
+                <input type="text" name="Marca" id="Marca" />
+              </p>
+              <!-- grupo:Apellido 
+              <p>
+                <label for="Apellido">Apellido</label>
+                <i id="Icono-Apellido"></i>
+                <input type="text" name="Apellido" id="Apellido" />
+              </p>-->
+              <!-- grupo:Modelo -->
+              <p>
+                <label for="Modelo">Modelo</label>
+                <i id="Icono-Modelo"></i>
+                <input type="text" name="Modelo" id="Modelo" />
+              </p>
+              <!-- grupo:Email -->
+              <p>
+                <label for="Email">Email</label>
+                <i id="Icono-Email"></i>
+                <input type="email" name="Email" id="Email" />
+              </p>
+              <!-- grupo:Telefono -->
+              <p>
+                <label for="Telefono">Telefono</label>
+                <i id="Icono-Telefono"></i>
+                <input type="text" name="Telefono" id="Telefono" />
+              </p>
+              <!-- grupo:version -->
+              <p>
+                <label for="Version">Version</label>
+                <i id="Icono-Version"></i>
+                <input type="text" name="Version" id="Version" />
+              </p>
+              <!-- grupo:Domiciolio -->
+              <p>
+                <label for="Domicilio">Domicilio</label>
+                <i id="Icono-Domicilio"></i>
+                <input type="text" name="Domicilio" id="Domicilio" />
+              </p>
+              <!-- grupo:Kilometros -->
+              <p>
+                <label for="Kilometros">Kilometros</label>
+                <i id="Icono-Kilometros"></i>
+                <input type="text" name="Kilometros" id="Kilometros" />
+              </p>
+              <p>
+                <label for="Año">Año</label> 
+                <br>
+                 <select name="Año" id="Año">
+                  <option value="2010">2010</option>
+                  <option value="2011">2011</option>
+                  <option value="2012">2012</option>
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                 </select>
+              </p>
+              <p>
+                <label> Insertar Imagenes</label>
+                <input type="file" name="Imagenes" id="Imagenes" />
+              </p>
+              <div class="terminos-condiciones">
+                <input type="checkbox" name="checkbox" id="checkbox" /> 
+                <label for="checkbox"> En caso de continuar acepto que un vendedor se comunique conmigo</label>
+              </div>
+              <p class="block">
+                <button id="btn-solicitar-cotizacion" type="submit">Solicitar Cotizacion</button>
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="containerfooter">
+        <div class="box">
+          <h4>DIRECCIÓN</h4>
+          <p>Av.Colón 3950,Córdoba, Argentina</p>
+        </div>
+        <div class="box">
+          <h4>CONTACTO</h4>
+          <p>0810-888-62478</p>
+        </div>
+        <div class="box">
+          <h4>HORARIO DE ATENCIÓN</h4>
+          <p>Lunes a Viernes:</p>
+          <p>08:30 a 19:00 hs.</p>
+          <p>Sabados:</p>
+          <p>9:00 a 14:00 hs.</p>
+        </div>
+        <div class="box">
+          <h4>¡SEGUINOS!</h4>
+          <div class="red-social">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-twitter"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/form-venta.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
