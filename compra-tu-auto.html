@@ -150,72 +150,7 @@
 
       <section class="container">
         <div class="container-stock">
-          <div class="stock">
-            <figure>
-              <img src="img/tracker.jpg" alt="" />
-            </figure>
-            <div class="contenido">
-              <h3>Chevrolet Tracker Premier</h3>
-              <p>2018 - 70.000KM - Manual</p>
-              <p class="precio">$12.000.000</p>
-              <button>Ver mas</button>
-            </div>
-          </div>
-          <div class="stock">
-            <figure>
-              <img src="img/s10_2020.jpg" alt="" />
-            </figure>
-            <div class="contenido">
-              <h3>Chevrolet S10 LS 4X2 LTZ</h3>
-              <p>2020 - 112.000KM - Manual</p>
-              <p class="precio">$28.000.000</p>
-              <button>Ver mas</button>
-            </div>
-          </div>
-          <div class="stock">
-            <figure>
-              <img src="img/t-cross.jpg"  alt=""/>
-            </figure>
-            <div class="contenido">
-              <h3>Volkswagen T-Cross Highline</h3>
-              <p>2021 - 30.000KM - Automatica</p>
-              <p class="precio">$38.000.000</p>
-              <button>Ver mas</button>
-            </div>
-          </div>
-          <div class="stock">
-            <figure>
-              <img src="img/jeep.jpg" alt=""/>
-            </figure>
-            <div class="contenido">
-              <h3>Jeep Renegade Loguitude</h3>
-              <p>2020 - 24.000KM - Automatica</p>
-              <p class="precio">$23.000.000</p>
-              <button>Ver mas</button>
-            </div>
-          </div>
-          <div class="stock">
-            <figure>
-              <img src="img/ford_ranger_0km_xl.jpg" alt="" />
-            </figure>
-            <div class="contenido">
-              <h3>Ford Ranger Xl 4x4</h3>
-              <p>2023 - 0KM - Automatica</p>
-              <p class="precio">$43.000.000</p>
-              <button>Ver mas</button>
-            </div>
-          </div>
-          <div class="stock">
-            <figure>
-              <img src="img/tracker_0km.jpg" alt=""/>
-            </figure>
-            <div class="contenido">
-              <h3>Chverolet LTZ</h3>
-              <p>2023 - 0KM - Automatica</p>
-              <p class="precio">$53.000.000</p>
-              <button>Ver mas</button>
-            </div>
-          </div>
+
         </div>
       </section>
     </main>
@@ -248,5 +183,65 @@
       </div>
     </footer>
     <script src="js/index.js"></script>
+   <script>
+      // const URL = "http://127.0.0.1:5000/"
+	 const URL = "https://GimenezCristian.pythonanywhere.com/"
+
+      // Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
+      //const URL = "https://USUARIO.pythonanywhere.com/"
+      
+      
+      // Obtener el contenedor donde se insertará el contenido
+      //const contenedorVehiculos = document.getElementById('container-stock');
+      const contenedorVehiculos = document.querySelector('.container-stock');
+      // Variable para almacenar el contenido HTML generado
+      let htmlVehiculos = '';
+
+      // Realizamos la solicitud GET al servidor para obtener todos los productos.
+      fetch(URL + 'vehiculos')
+          .then(function (response) {
+              if (response.ok) {
+                  //Si la respuesta es exitosa (response.ok), convierte el cuerpo de la respuesta de formato JSON a un objeto JavaScript y pasa estos datos a la siguiente promesa then.
+                  return response.json(); 
+          } else {
+                  // Si hubo un error, lanzar explícitamente una excepción para ser "catcheada" más adelante
+                  throw new Error('Error al obtener los vehiculos.');
+              }
+          })
+
+          //Esta función maneja los datos convertidos del JSON.
+          .then(function (data) {
+              //let tablaVehiculos = document.getElementById('tablaVehiculos'); //Selecciona el elemento del DOM donde se mostrarán los productos.
+              // Iteramos sobre cada producto y agregamos filas a la tabla
+              console.log(data)
+              for (let vehiculo of data) {
+                  // Crear un string con el contenido HTML usando template strings
+                  htmlVehiculos += `
+                  <div class="stock">
+                      <figure>
+                      <img src="./static/imagenes/${vehiculo.imagen_url}" alt=""/>
+                      </figure>
+                      <div class="contenido">
+                      <h3>${vehiculo.marca} ${vehiculo.modelo}</h3>
+                      <p>${vehiculo.año} - ${vehiculo.kilometros}km - ${vehiculo.transmision} </p>
+                      <p class="precio">$${vehiculo.precio}</p>
+                      <button>Ver más</button>
+                      </div>
+                  </div>
+                  `; 
+              }
+              contenedorVehiculos.innerHTML = htmlVehiculos;
+          })
+
+          //Captura y maneja errores, mostrando una alerta en caso de error al obtener los productos.
+          .catch(function (error) {
+              // Código para manejar errores
+              alert('Error al obtener los vehiculos.');
+      });
+
+      // Insertar el contenido HTML generado en el contenedor
+      //contenedorVehiculos.innerHTML = htmlVehiculos;
+
+  </script>
   </body>
 </html>
